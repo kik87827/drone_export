@@ -1,0 +1,82 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body">
+	<div class="page_wrap">
+
+		<section class="mid_wrap">
+			<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+			<script>
+				$(function() {
+					$("#btn_callLayer").on("click", function() {
+						dimLayerShow({
+							target: "#popup_templete"
+						});
+					});
+					dimLayerShow({
+						target: "#popup_templete"
+					});
+				});
+			</script>
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_templete">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item wtype2">
+					<div class="fullpop_titlow">
+						<h4 class="fullpop_title">장치정보</h4>
+					</div>
+					<div class="fullpop_contlow">
+						<div class="fullpop_contlow_in">
+							<div class="data_table_w">
+								<table class="data_table">
+									<tbody>
+										<tr>
+											<th>분류</th>
+											<th>장치명</th>
+											<th>모델</th>
+											<th>제조사</th>
+										</tr>
+										<tr>
+											<td>스테이션</td>
+											<td>스테이션1</td>
+											<td>00스테이션</td>
+											<td>00제조사</td>
+										</tr>
+										<tr>
+											<th>등록번호</th>
+											<th colspan="3">타입</th>
+										</tr>
+										<tr>
+											<td>스테이션</td>
+											<td colspan="3">
+												<ul class="keyword_flist">
+													<li>#고정형 스테이션</li>
+													<li>#자동 이착륙</li>
+													<li>#드론 자동 충전</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="masking_quadbox"><img src="images/temp_img2.png" alt=""></div>
+						</div>
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
+		</section>
+	</div>
+</body>
+
+</html>

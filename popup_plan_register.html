@@ -1,0 +1,160 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body">
+	<div class="page_wrap">
+
+		<section class="mid_wrap">
+			<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+			<script>
+				$(function() {
+					$("#btn_callLayer").on("click", function() {
+						dimLayerShow({
+							target: "#popup_templete"
+						});
+					});
+					dimLayerShow({
+						target: "#popup_templete"
+					});
+
+					// 달력
+					var options = {
+						singleDatePicker: true,
+						showDropdowns: true,
+						parentEl: "body",
+						locale: {
+							format: 'YYYY-MM-DD',
+							daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+						}
+					}
+
+					var windowWid = 0;
+					$(window).on("resize", function() {
+						if (windowWid == $(window).width()) {
+							return;
+						}
+						if ($(window).width() > 1023) {
+							options.parentEl = "body";
+						} else {
+							options.parentEl = ".fullpop_contlow";
+						}
+						$('#plan_calendar').daterangepicker(options);
+						windowWid = $(window).width();
+					}).resize();
+				});
+			</script>
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_templete">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item">
+					<div class="fullpop_titlow">
+						<h4 class="fullpop_title">계획등록</h4>
+					</div>
+					<div class="fullpop_contlow">
+						<div class="fullpop_contlow_in">
+							<div class="tb_scr_low">
+								<div class="data_table_w">
+									<table class="data_table">
+										<tbody>
+											<tr>
+												<th>날씨</th>
+												<th>온도(℃)</th>
+												<th>습도(%)</th>
+												<th>풍향</th>
+												<th>풍속(m/s)</th>
+												<th>강수확률(%)</th>
+												<th>강수량(mm)</th>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather_obj"><img src="images/obj_weather.png" alt=""></div>
+												</td>
+												<td>7</td>
+												<td>50</td>
+												<td><img src="images/ico_wind.png" alt=""></td>
+												<td>4</td>
+												<td>10</td>
+												<td>-</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="fieldset_form_w">
+								<div class="fieldset_form">
+									<div class="fieldset_tr">
+										<div class="fieldset_hitem short_type">
+											<div class="fieldset_th"><span class="fieldset_wpsp">시작일자</span></div>
+											<div class="fieldset_td">
+												<input type="text" class="form_input define_calendar" id="plan_calendar">
+											</div>
+										</div>
+										<div class="fieldset_hitem long_type">
+											<div class="fieldset_th"><span class="fieldset_wpsp">이용시간</span></div>
+											<div class="fieldset_td">
+												<div class="inform_infxwrap">
+													<div class="inform_infxhitem">
+														<div class="inform_hobj"><select class="form_select">
+																<option>00</option>
+															</select></div>
+														<div class="inform_hobj"><select class="form_select">
+																<option>00</option>
+															</select></div>
+													</div>
+													<div class="inform_infxhitem define_short"><span class="infx_wpsp">~</span></div>
+													<div class="inform_infxhitem">
+														<div class="inform_hobj"><select class="form_select">
+																<option>00</option>
+															</select></div>
+														<div class="inform_hobj"><select class="form_select">
+																<option>00</option>
+															</select></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="fieldset_tr">
+										<div class="fieldset_hitem short_type">
+											<div class="fieldset_th"><span class="fieldset_wpsp">고도선택</span></div>
+											<div class="fieldset_td">
+												<select class="form_select">
+													<option>00</option>
+												</select>
+											</div>
+										</div>
+										<div class="fieldset_hitem long_type">
+											<div class="fieldset_th"><span class="fieldset_wpsp">드론선택</span></div>
+											<div class="fieldset_td">
+												<select class="form_select">
+													<option>선택하세요</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fullpop_btnlow">
+						<a href="javascript:;" class="btn_submitbox type2 closetrigger">제출하기</a><!-- closetrigger 닫기 트리거 -->
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
+		</section>
+	</div>
+</body>
+
+</html>

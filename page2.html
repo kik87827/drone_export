@@ -1,0 +1,101 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body flex_body">
+	<div class="page_wrap flex_wrap">
+		<!-- mobile header -->
+		<header class="mb_header">
+			<a href="#" class="btn_totalcall"><span class="total_in"></span><span class="hdtext">전체메뉴 열기</span></a>
+			<h1 class="mbtoplogo"><a href="#" class="mbtoplogo_link"><img src="images/top_logo.png" alt="the SecondSky"></a>
+				<a href="#" class="btn_mypagego"><span class="mypagego_thum"></span><span class="hdtext">마이페이지 가기</span></a>
+		</header>
+		<!-- // mobile header -->
+		<!-- left -->
+		<div class="aside_menu_respon_zone">
+			<div class="aside_dim"></div>
+			<div class="aside_menu_zone">
+				<div class="aside_top">
+					<h1 class="astoplogo"><a href="#" class="astoplogo_link"><img src="images/top_logo_left.png" alt=""></a></h1>
+					<div class="asmenu_low">
+						<ul class="asmenu_vlist">
+							<li><a href="#" class="asmenu ico_home"><span class="asmenu_text">HOME</span></a></li>
+							<li><a href="#" class="asmenu ico_main"><span class="asmenu_text">메인 장치</span></a></li>
+							<li><a href="#" class="asmenu ico_sub"><span class="asmenu_text">보조 장치</span></a></li>
+							<li><a href="#" class="asmenu ico_history"><span class="asmenu_text">비행 이력</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="aside_bottom">
+					<div class="icobox_link_w">
+						<a href="#" class="icobox_link"><span class="icobox_linktext">드론 비행 등록 및 <br>관리 서비스</span></a>
+					</div>
+					<div class="aside_emenuitem_w">
+						<div class="aside_emenu_title">SETTINGS</div>
+						<div class="aside_emenu_vlist_w">
+							<ul class="aside_emenu_vlist">
+								<li><a href="#" class="aside_emenu ico_profile"><span class="emenu_text">프로필</span></a></li>
+								<li><a href="#" class="aside_emenu ico_help"><span class="emenu_text">Help & Support</span></a></li>
+								<li><a href="#" class="aside_emenu ico_logout"><span class="emenu_text">로그아웃</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="aside_footer">
+						<p class="asfoot_company">(주)보헤미안오에스</p>
+						<p class="asfoot_copy">Copyright © BohemianOS 2022</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // left -->
+		<!-- right -->
+		<div class="right_content_zone">
+			<div class="right_maplow">
+				<div class="right_mapfxwrap">
+					<div class="map_cell">
+						<ul class="submap_hlist">
+							<li><a href="#" class="submap_home"><span class="submap_text">HOME</span></a></li>
+						</ul>
+					</div>
+					<div class="util_cell">
+						<div class="util_hlist">
+							<div class="util_date_input_w"><input type="text" class="util_range" value="2021-10-11 ~ 2021-10-15"></div>
+							<a href="javascript:;" class="btn_utilmen"></a>
+						</div>
+					</div>
+					<script>
+						$(function() {
+							$('.util_range').daterangepicker({
+								opens: 'left',
+								"startDate": "2022-05-22",
+								"endDate": "2022-05-29",
+								showDropdowns: true,
+								locale: {
+									format: 'YYYY-MM-DD',
+									daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+									monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+								}
+							}, function(start, end, label) {
+
+							});
+						})
+					</script>
+				</div>
+			</div>
+			<div class="right_contents">
+				내용이 들어갑니다.
+			</div>
+		</div>
+		<!-- // right -->
+	</div>
+</body>
+
+</html>

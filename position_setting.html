@@ -1,0 +1,164 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body">
+	<div class="page_wrap">
+
+		<section class="mid_wrap">
+			<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+			<script>
+				$(function() {
+					$("#btn_callLayer").on("click", function() {
+						dimLayerShow({
+							target: "#popup_templete"
+						});
+					});
+					dimLayerShow({
+						target: "#popup_templete"
+					});
+				});
+			</script>
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_templete">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item">
+					<div class="fullpop_titlow ftype2">
+						<h4 class="fullpop_title">위치 설정</h4>
+						<div class="fullpop_title_layer type2"><select class="formselect_sm mbtype2">
+								<option>서울특별시 서초구</option>
+							</select></div>
+					</div>
+					<div class="fullpop_contlow type2">
+						<div class="fullpop_contlow_in">
+							<div class="maplayout_fxwrap">
+								<div class="maplayout_fxform">
+									<div class="map_fieldset_fxwrap">
+										<input type="text" class="form_input" placeholder="주소, 키워드를 입력하세요">
+										<a href="javascript:;" class="btn_formsearch"><span class="hdtext">검색</span></a>
+									</div>
+									<div class="map_result_tb_w">
+										<table class="map_result_tb">
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">우리은행 서산점</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 명천리 250-12</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">서산 한화이글수 훈련장</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 성연면 동부동 524</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">늘푸른 오스카빌 아파트</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 명천리 250-12</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">서산시청</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 성연면 동부동 524</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">우리은행 서산점</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 명천리 250-12</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">서산 한화이글수 훈련장</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 성연면 동부동 524</p>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="map_label_w"><span class="map_label">늘푸른 오스카빌 아파트</span></span></th>
+												<td>
+													<p class="map_result_data">충남 서산시 명천리 250-12</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" class="nodata_td">
+													<p class="nodata_para">데이터가 없습니다.</p>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="data_linkage_item_w">
+										<div class="data_linkage_item">
+											<p class="data_linkage_title">최근검색</p>
+											<div class="data_linkage_wrap">
+												<ul class="data_linkage_vlist">
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 명천리 250-12</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 성연면 동부동 524</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 명천리 250-12</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 성연면 동부동 524</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 명천리 250-12</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li>
+														<div class="data_lkitem">
+															<a href="javascript:;" class="data_lktext">충남 서산시 명천리 250-12</a>
+															<button type="button" class="btn_datadel"></button>
+														</div>
+													</li>
+													<li class="nodata_li">
+														<p class="nodata_para">데이터가 없습니다.</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="maplayout_apizone" style="background:#ddd;text-align: center;">
+									<div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+										API ZONE
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
+		</section>
+	</div>
+</body>
+
+</html>

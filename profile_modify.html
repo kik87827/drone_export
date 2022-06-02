@@ -1,0 +1,163 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body flex_body">
+	<div class="page_wrap flex_wrap">
+		<!-- mobile header -->
+		<header class="mb_header">
+			<a href="#" class="btn_totalcall"><span class="total_in"></span><span class="hdtext">전체메뉴 열기</span></a>
+			<h1 class="mbtoplogo"><a href="#" class="mbtoplogo_link"><img src="images/top_logo.png" alt="the SecondSky"></a>
+				<a href="#" class="btn_mypagego"><span class="mypagego_thum"></span><span class="hdtext">마이페이지 가기</span></a>
+		</header>
+		<!-- // mobile header -->
+		<!-- left -->
+		<div class="aside_menu_respon_zone">
+			<div class="aside_dim"></div>
+			<div class="aside_menu_zone">
+				<div class="aside_top">
+					<h1 class="astoplogo"><a href="#" class="astoplogo_link"><img src="images/top_logo_left.png" alt=""></a></h1>
+					<div class="asmenu_low">
+						<ul class="asmenu_vlist">
+							<li><a href="#" class="asmenu ico_home"><span class="asmenu_text">HOME</span></a></li>
+							<li><a href="#" class="asmenu ico_main"><span class="asmenu_text">메인 장치</span></a></li>
+							<li><a href="#" class="asmenu ico_sub"><span class="asmenu_text">보조 장치</span></a></li>
+							<li><a href="#" class="asmenu ico_history"><span class="asmenu_text">비행 이력</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="aside_bottom">
+					<div class="icobox_link_w">
+						<a href="#" class="icobox_link"><span class="icobox_linktext">드론 비행 등록 및 <br>관리 서비스</span></a>
+					</div>
+					<div class="aside_emenuitem_w">
+						<div class="aside_emenu_title">SETTINGS</div>
+						<div class="aside_emenu_vlist_w">
+							<ul class="aside_emenu_vlist">
+								<li><a href="#" class="aside_emenu ico_profile"><span class="emenu_text">프로필</span></a></li>
+								<li><a href="#" class="aside_emenu ico_help"><span class="emenu_text">Help & Support</span></a></li>
+								<li><a href="#" class="aside_emenu ico_logout"><span class="emenu_text">로그아웃</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="aside_footer">
+						<p class="asfoot_company">(주)보헤미안오에스</p>
+						<p class="asfoot_copy">Copyright © BohemianOS 2022</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // left -->
+		<!-- right -->
+		<div class="right_content_zone type2">
+			<div class="right_maplow">
+				<div class="right_mapfxwrap">
+					<div class="map_cell">
+						<ul class="submap_hlist">
+							<li><a href="#" class="submap_home"><span class="submap_text">HOME</span></a></li>
+							<li><a href="#" class="submap_menu"><span class="submap_text">프로필</span></a></li>
+						</ul>
+					</div>
+					<div class="util_cell">
+						<div class="util_hlist">
+							<a href="javascript:;" class="btn_utilmen"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right_contents">
+				<div class="content_intitlow">
+					<h2 class="content_intit">프로필 수정</h2>
+				</div>
+				<div class="content_incontlow">
+					<div class="cform_box">
+						<div class="cform_in">
+							<div class="cform_imglow"><img src="images/obj_member.png" alt=""></div>
+							<!-- respon_table -->
+							<div class="respon_table">
+								<div class="respon_tr">
+									<div class="respon_cell define_th">
+										<span class="rp_thtext">사용자 이름</span>
+									</div>
+									<div class="respon_cell define_td">
+										<input type="text" class="form_input" placeholder="사용자 이름을 입력하세요" data-placeholder="사용자 이름을 입력하세요" value="고영우">
+										<span class="mobile_placeholder">사용자 이름을 입력하세요</span>
+									</div>
+								</div>
+								<div class="respon_tr">
+									<div class="respon_cell define_th">
+										<span class="rp_thtext">생년월일</span>
+									</div>
+									<div class="respon_cell define_td">
+										<div clas="pc_short_type"><input type="text" class="form_input" placeholder="생년월일을 입력하세요" data-placeholder="생년월일을 입력하세요" value="1995-02-11"></div>
+										<span class="mobile_placeholder">생년월일을 입력하세요</span>
+									</div>
+								</div>
+								<div class="respon_tr">
+									<div class="respon_cell define_th">
+										<span class="rp_thtext">성별</span>
+									</div>
+									<div class="respon_cell define_td">
+										<div class="chkrd_flist_w">
+											<ul class="chkrd_flist">
+												<li>
+													<div class="chkrd_item">
+														<input type="checkbox" class="chkrd" id="woman" name="gender">
+														<label for="woman" class="chkrd_label">여자</label>
+													</div>
+												</li>
+												<li>
+													<div class="chkrd_item">
+														<input type="checkbox" class="chkrd" id="men" name="gender" checked>
+														<label for="men" class="chkrd_label">남자</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="respon_tr">
+									<div class="respon_cell define_th">
+										<span class="rp_thtext">이메일</span>
+									</div>
+									<div class="respon_cell define_td">
+										<div class="inform_hitem_g">
+											<div class="inform_hlong">
+												<input type="text" class="form_input" placeholder="이메일을 입력하세요" data-placeholder="이메일을 입력하세요" value="Eddie@usswebplatform.co.kr">
+												<span class="mobile_placeholder">이메일을 입력하세요</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="respon_tr">
+									<div class="respon_cell define_th">
+										<span class="rp_thtext">휴대폰번호</span>
+									</div>
+									<div class="respon_cell define_td">
+										<input type="text" class="form_input" placeholder="휴대폰 번호를 입력하세요" data-placeholder="휴대폰 번호를 입력하세요" value="010-6421-6313">
+										<span class="mobile_placeholder">휴대폰 번호를 입력하세요</span>
+									</div>
+								</div>
+							</div>
+							<!-- // respon_table -->
+							<div class="btn_formsubmit_low dtype2">
+								<a href="#" class="btn_formsubmit">저장하기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // right -->
+	</div>
+</body>
+
+</html>

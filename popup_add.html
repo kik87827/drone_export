@@ -1,0 +1,421 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body">
+	<div class="page_wrap">
+
+		<section class="mid_wrap">
+			<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+			<script>
+				$(function() {
+					$("#btn_callLayer").on("click", function() {
+						dimLayerShow({
+							target: "#popup_templete",
+							openCallback: function() {
+								callbackfunc();
+							}
+						});
+					});
+					dimLayerShow({
+						target: "#popup_templete",
+						openCallback: function() {
+							callbackfunc();
+						}
+					});
+				});
+
+				function callbackfunc() {
+					$(function() {
+						tabFunc("#target_tabgroup .ico_choicetab");
+					});
+				}
+			</script>
+			<!-- 레이어팝업 -->
+			<div class="dimlayer_z fulltype" id="popup_templete">
+				<div class="fullpop_dim"></div>
+				<div class="fullpop_item wtype3">
+					<div class="fullpop_titlow">
+						<h4 class="fullpop_title">메인장치 추가</h4>
+					</div>
+					<div class="fullpop_contlow">
+						<div class="fullpop_contlow_in">
+							<div class="cont_tabwrap_low">
+								<ul class="vitemform_list">
+									<li>
+										<div class="vitem_titlow">
+											<p class="vitem_tit">그룹명</p>
+										</div>
+										<div class="vitem_contlow dtype2">
+											<ul class="ico_choicetab_hlist parent_dom" id="target_tabgroup">
+												<li>
+													<a href="#tabcont01" class="ico_choicetab active">
+														<div class="ico_item"></div>
+														<div class="text_item">드론</div>
+													</a>
+												</li>
+												<li>
+													<a href="#tabcont02" class="ico_choicetab">
+														<div class="ico_item type2"></div>
+														<div class="text_item">스테이션</div>
+													</a>
+												</li>
+												<li>
+													<a href="#tabcont03" class="ico_choicetab">
+														<div class="ico_item type3"></div>
+														<div class="text_item">관측장치</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="cont_tabcont_low" id="tabcont_group">
+								<div class="cont_tabcont" id="tabcont01" style="display:block">
+									<ul class="vitemform_list">
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit">장치 이름</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">모델명</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">제조사</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">장치 등록번호(신고번호)</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">용도</p>
+											</div>
+											<div class="vitem_contlow">
+												<ul class="formboxitem_flist">
+													<li>
+														<input type="radio" name="use" class="boxitem_input" id="use_01">
+														<label for="use_01" class="boxitem_label">촬영용</label>
+													</li>
+													<li>
+														<input type="radio" name="use" class="boxitem_input" id="use_02">
+														<label for="use_02" class="boxitem_label">산업용</label>
+													</li>
+													<li>
+														<input type="radio" name="use" class="boxitem_input" id="use_03">
+														<label for="use_03" class="boxitem_label">경기용</label>
+													</li>
+													<li>
+														<input type="radio" name="use" class="boxitem_input" id="use_04">
+														<label for="use_04" class="boxitem_label">완구용</label>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">타입</p>
+											</div>
+											<div class="vitem_contlow">
+												<select class="form_select">
+													<option value="0">선택하세요.</option>
+													<option value="1">옵션1</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">이미지</p>
+											</div>
+											<div class="vitem_contlow">
+												<ul class="upload_flist">
+													<li>
+														<div class="btn_uploadbox"><input type="file" class="upload_file"></div>
+													</li>
+													<li>
+														<div class="upload_item"><img src="images/temp_78x78.png" class="upload_img" alt=""><button type="button" class="btn_uploadclose"></button></div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="cont_tabcont" id="tabcont02">
+									<ul class="vitemform_list">
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit">장치 이름</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">모델명</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">제조사</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">장치 등록번호(신고번호)</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">타입 및 기능</p>
+											</div>
+											<div class="vitem_contlow">
+												<ul class="formboxitem_flist wtype2">
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_01">
+														<label for="type_01" class="boxitem_label">이동식 스테이션 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_02">
+														<label for="type_02" class="boxitem_label">고정형 스테이션 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_03">
+														<label for="type_03" class="boxitem_label">드론 자동 이착륙 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_04">
+														<label for="type_04" class="boxitem_label">드론 무선 충전 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_05">
+														<label for="type_05" class="boxitem_label">드론 다중 운영 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_06">
+														<label for="type_06" class="boxitem_label">자동 개폐 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_07">
+														<label for="type_07" class="boxitem_label">드론 도난 방지 기능 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_08">
+														<label for="type_08" class="boxitem_label">자체 유지/보수 기능 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_09">
+														<label for="type_09" class="boxitem_label">온도 측정 시스템 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_10">
+														<label for="type_10" class="boxitem_label">내외부 풍속계 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_11">
+														<label for="type_11" class="boxitem_label">온습도 센서 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type_12">
+														<label for="type_12" class="boxitem_label">프로펠러파손 측정 +</label>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">타입</p>
+											</div>
+											<div class="vitem_contlow">
+												<select class="form_select">
+													<option value="0">선택하세요.</option>
+													<option value="1">옵션1</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<div class="vitem_hfxwrap">
+												<div class="vitem_hfxitem">
+													<div class="vitem_titlow">
+														<p class="vitem_tit define_emp">이미지</p>
+													</div>
+													<div class="vitem_contlow">
+														<ul class="upload_flist">
+															<li>
+																<div class="btn_uploadbox"><input type="file" class="upload_file"></div>
+															</li>
+															<li>
+																<div class="upload_item"><img src="images/temp_78x78.png" class="upload_img" alt=""><button type="button" class="btn_uploadclose"></button></div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="vitem_hfxitem">
+													<div class="vitem_titlow">
+														<p class="vitem_tit define_emp">설치위치</p>
+													</div>
+													<div class="vitem_contlow">
+														<ul class="posadd_vlist">
+															<li>
+																<button type="button" class="btn_mapadd"><span class="mapadd_text">위치추가</span></button>
+																<div class="mapadd_result">충청남도 서산시 <br>**** 77 7 77</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+										</li>
+									</ul>
+								</div>
+								<div class="cont_tabcont" id="tabcont03">
+									<ul class="vitemform_list">
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit">장치 이름</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">모델명</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">제조사</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">장치 등록번호(신고번호)</p>
+											</div>
+											<div class="vitem_contlow">
+												<input type="text" class="form_input">
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">타입 및 기능</p>
+											</div>
+											<div class="vitem_contlow">
+												<ul class="formboxitem_flist wtype2">
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_01">
+														<label for="type2_01" class="boxitem_label">실시간 영상 확인 및 분석 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_02">
+														<label for="type2_02" class="boxitem_label">매립형 무선조종기 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_03">
+														<label for="type2_03" class="boxitem_label">내장형 배터리 탑재 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_04">
+														<label for="type2_04" class="boxitem_label">드론용 배터리 호환 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_05">
+														<label for="type2_05" class="boxitem_label">접이식 캐리어 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_06">
+														<label for="type2_06" class="boxitem_label">비디오 수신기 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_07">
+														<label for="type2_07" class="boxitem_label">데이터 링크 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_08">
+														<label for="type2_08" class="boxitem_label">비디오 링크 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_09">
+														<label for="type2_09" class="boxitem_label">드론 및 짐벌 제어 +</label>
+													</li>
+													<li>
+														<input type="radio" name="type" class="boxitem_input" id="type2_10">
+														<label for="type2_10" class="boxitem_label">실시간 비행 상태 피드백 +</label>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="vitem_titlow">
+												<p class="vitem_tit define_emp">이미지</p>
+											</div>
+											<div class="vitem_contlow">
+												<ul class="upload_flist">
+													<li>
+														<div class="btn_uploadbox"><input type="file" class="upload_file"></div>
+													</li>
+													<li>
+														<div class="upload_item"><img src="images/temp_78x78.png" class="upload_img" alt=""><button type="button" class="btn_uploadclose"></button></div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fullpop_btnlow">
+						<a href="javascript:;" class="btn_submitbox">추가하기</a>
+					</div>
+					<button type="button" class="btn_layerclose"></button>
+				</div>
+			</div>
+			<!-- // 레이어팝업 -->
+		</section>
+	</div>
+</body>
+
+</html>

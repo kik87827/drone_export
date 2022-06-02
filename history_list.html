@@ -1,0 +1,198 @@
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/moment.min.js"></script>
+<script src="./js/daterangepicker.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<title></title>
+
+<body class="front_body flex_body">
+	<div class="page_wrap flex_wrap">
+		<!-- mobile header -->
+		<header class="mb_header">
+			<a href="#" class="btn_totalcall"><span class="total_in"></span><span class="hdtext">전체메뉴 열기</span></a>
+			<h1 class="mbtoplogo"><a href="#" class="mbtoplogo_link"><img src="images/top_logo.png" alt="the SecondSky"></a>
+				<a href="#" class="btn_mypagego"><span class="mypagego_thum"></span><span class="hdtext">마이페이지 가기</span></a>
+		</header>
+		<!-- // mobile header -->
+		<!-- left -->
+		<div class="aside_menu_respon_zone">
+			<div class="aside_dim"></div>
+			<div class="aside_menu_zone">
+				<div class="aside_top">
+					<h1 class="astoplogo"><a href="#" class="astoplogo_link"><img src="images/top_logo_left.png" alt=""></a></h1>
+					<div class="asmenu_low">
+						<ul class="asmenu_vlist">
+							<li><a href="#" class="asmenu ico_home"><span class="asmenu_text">HOME</span></a></li>
+							<li><a href="#" class="asmenu ico_main"><span class="asmenu_text">메인 장치</span></a></li>
+							<li><a href="#" class="asmenu ico_sub"><span class="asmenu_text">보조 장치</span></a></li>
+							<li class="active"><a href="#" class="asmenu ico_history"><span class="asmenu_text">비행 이력</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="aside_bottom">
+					<div class="icobox_link_w">
+						<a href="#" class="icobox_link"><span class="icobox_linktext">드론 비행 등록 및 <br>관리 서비스</span></a>
+					</div>
+					<div class="aside_emenuitem_w">
+						<div class="aside_emenu_title">SETTINGS</div>
+						<div class="aside_emenu_vlist_w">
+							<ul class="aside_emenu_vlist">
+								<li><a href="#" class="aside_emenu ico_profile"><span class="emenu_text">프로필</span></a></li>
+								<li><a href="#" class="aside_emenu ico_help"><span class="emenu_text">Help & Support</span></a></li>
+								<li><a href="#" class="aside_emenu ico_logout"><span class="emenu_text">로그아웃</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="aside_footer">
+						<p class="asfoot_company">(주)보헤미안오에스</p>
+						<p class="asfoot_copy">Copyright © BohemianOS 2022</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // left -->
+		<!-- right -->
+		<div class="right_content_zone type2">
+			<div class="right_maplow">
+				<div class="right_mapfxwrap">
+					<div class="map_cell">
+						<ul class="submap_hlist">
+							<li><a href="#" class="submap_home"><span class="submap_text">HOME</span></a></li>
+							<li><a href="#" class="submap_menu"><span class="submap_text">비행이력</span></a></li>
+						</ul>
+					</div>
+					<div class="util_cell">
+						<div class="util_hlist">
+							<a href="javascript:;" class="btn_utilmen"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right_contents">
+				<div class="content_intitlow">
+					<h2 class="content_intit">비행이력</h2>
+					<div class="intit_else_w">
+						<a href="#" class="btn_cboxobj">CSV 다운</a>
+						<a href="#" class="btn_cboxobj type2">비행 추가</a>
+					</div>
+				</div>
+				<div class="content_incontlow">
+					<div class="both_sort_fxwrap">
+						<div class="both_sort_fxleft">
+							<span class="btn_hisdata"><span class="histdata_in">기록:비행</span><button type="button" class="btn_indata_del"></button></span>
+							<select class="formselect_sm">
+								<option>시간 프레임</option>
+							</select>
+							<select class="formselect_sm">
+								<option>상태</option>
+							</select>
+						</div>
+						<div class="both_sort_fxright">
+							<a href="javascript:;" class="btn_normalbox">편집</a>
+						</div>
+					</div>
+					<div class="respon_list_w">
+						<table class="respon_list">
+							<colgroup>
+								<col style="width:10%;" />
+								<col style="width:10%;" />
+								<col style="width:10%;" />
+								<col style="width:10%;" />
+								<col />
+								<col style="width:12%;" />
+								<col style="width:10%;" />
+								<col style="width:10%;" />
+								<col style="width:11%;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="list_thtext">일시</span></th>
+									<th><span class="list_thtext">드론명</span></th>
+									<th><span class="list_thtext">모델</span></th>
+									<th><span class="list_thtext">제조사</span></th>
+									<th><span class="list_thtext">비행 시간</span></th>
+									<th><span class="list_thtext">비행 고도(평균)</span></th>
+									<th><span class="list_thtext">비행 거리</span></th>
+									<th><span class="list_thtext">비행 타입</span></th>
+									<th><span class="list_thtext">상태</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="list_tdtext">2022-04-08</span></td>
+									<td><span class="list_tdtext">드론1</span></td>
+									<td><span class="list_tdtext">Shuttle D</span></td>
+									<td><span class="list_tdtext">유맥에어</span></td>
+									<td><span class="list_tdtext">10:00~12:10 (02h 10m)</span></td>
+									<td><span class="list_tdtext">100m</span></td>
+									<td><span class="list_tdtext">7.5km</span></td>
+									<td><span class="list_tdtext">벤치테스트</span></td>
+									<td class="ptype2"><span class="ing_box">HEALTHY</span></td>
+								</tr>
+								<tr>
+									<td><span class="list_tdtext">2022-04-08</span></td>
+									<td><span class="list_tdtext">드론1</span></td>
+									<td><span class="list_tdtext">Shuttle D</span></td>
+									<td><span class="list_tdtext">유맥에어</span></td>
+									<td><span class="list_tdtext">10:00~12:10 (02h 10m)</span></td>
+									<td><span class="list_tdtext">100m</span></td>
+									<td><span class="list_tdtext">7.5km</span></td>
+									<td><span class="list_tdtext">벤치테스트</span></td>
+									<td class="ptype2"><span class="ing_box">HEALTHY</span></td>
+								</tr>
+								<tr>
+									<td><span class="list_tdtext">2022-04-08</span></td>
+									<td><span class="list_tdtext">드론1</span></td>
+									<td><span class="list_tdtext">Shuttle D</span></td>
+									<td><span class="list_tdtext">유맥에어</span></td>
+									<td><span class="list_tdtext">10:00~12:10 (02h 10m)</span></td>
+									<td><span class="list_tdtext">100m</span></td>
+									<td><span class="list_tdtext">7.5km</span></td>
+									<td><span class="list_tdtext">벤치테스트</span></td>
+									<td class="ptype2"><span class="ing_box">HEALTHY</span></td>
+								</tr>
+								<tr>
+									<td><span class="list_tdtext">2022-04-08</span></td>
+									<td><span class="list_tdtext">드론1</span></td>
+									<td><span class="list_tdtext">Shuttle D</span></td>
+									<td><span class="list_tdtext">유맥에어</span></td>
+									<td><span class="list_tdtext">10:00~12:10 (02h 10m)</span></td>
+									<td><span class="list_tdtext">100m</span></td>
+									<td><span class="list_tdtext">7.5km</span></td>
+									<td><span class="list_tdtext">벤치테스트</span></td>
+									<td class="ptype2"><span class="ing_box">HEALTHY</span></td>
+								</tr>
+								<tr>
+									<td colspan="9" class="nodata_td">
+										<p class="nodata_para">데이터가 없습니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- paging -->
+					<div class="pagination">
+						<a href="#none" class="control first"><span class="hdtext">처음 목록으로 이동</span></a>
+						<a href="#none" class="control prev"><span class="hdtext">이전 목록으로 이동</span></a>
+						<a href="#none" class="num on">1</a>
+						<a href="#none" class="num">2</a>
+						<a href="#none" class="num">3</a>
+						<a href="#none" class="num">4</a>
+						<a href="#none" class="num">5</a>
+						<a href="#none" class="control next"><span class="hdtext">다음 목록으로 이동</span></a>
+						<a href="#none" class="control last last_focus"><span class="hdtext">마지막 목록으로 이동</span></a>
+					</div>
+					<!-- // paging -->
+				</div>
+			</div>
+		</div>
+		<!-- // right -->
+	</div>
+</body>
+
+</html>
