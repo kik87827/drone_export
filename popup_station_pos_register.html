@@ -30,45 +30,35 @@
 			<!-- 레이어팝업 -->
 			<div class="dimlayer_z fulltype" id="popup_templete">
 				<div class="fullpop_dim"></div>
-				<div class="fullpop_item wtype2">
+				<div class="fullpop_item">
 					<div class="fullpop_titlow">
-						<h4 class="fullpop_title">장치정보</h4>
+						<h4 class="fullpop_title">스테이션 위치등록</h4>
 					</div>
-					<div class="fullpop_contlow">
+					<div class="fullpop_contlow type2">
 						<div class="fullpop_contlow_in">
-							<div class="data_table_w">
-								<table class="data_table">
-									<tbody>
-										<tr>
-											<th>분류</th>
-											<th>장치명</th>
-											<th>모델</th>
-											<th>제조사</th>
-										</tr>
-										<tr>
-											<td>스테이션</td>
-											<td>스테이션1</td>
-											<td>00스테이션</td>
-											<td>00제조사</td>
-										</tr>
-										<tr>
-											<th>등록번호</th>
-											<th colspan="3">타입</th>
-										</tr>
-										<tr>
-											<td>스테이션</td>
-											<td colspan="3">
-												<ul class="keyword_flist">
-													<li>#고정형 스테이션</li>
-													<li>#자동 이착륙</li>
-													<li>#드론 자동 충전</li>
-												</ul>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+							<!-- api -->
+							<style>
+								/* mobile */
+								@media (max-width:1023px) {
+									#api_staion_zone {
+										height: 430px !important;
+									}
+								}
+							</style>
+							<div style="height:860px;" id="api_staion_zone">
+								<div style="background:#ccc;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;height:100%">API</div>
+								<div style="position:absolute;top:150px;left:150px;">
+									<!-- <img src="images/pin_img.png" alt=""> -->
+									<img src="images/pin_imgx2.png" style="width:30px;height:35px" alt="">
+									<div style="position:absolute;top:-80px;left:0;white-space: nowrap;background:#fff;font-size:14px;color:#2d2d2d;padding:10px 13px;border:1px solid #455267;border-radius:5px;">
+										<!-- pointer -->
+										<img src="images/ico_bullon_pointer.png" style="width:10.5px;height:7.5px;position:absolute;bottom:-7.5px;left:8.5px;" alt="">
+										<!-- // pointer -->
+										충청남도서산시<br>**** *** 77777
+									</div>
+								</div>
 							</div>
-							<div class="masking_quadbox"><img src="images/temp_img2.png" alt=""></div>
+							<!-- // api -->
 						</div>
 					</div>
 					<button type="button" class="btn_layerclose"></button>
